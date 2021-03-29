@@ -3,14 +3,14 @@ package ro.fasttrackit.homework7;
 public class Product {
 	private String name;
 	private int price;
-	int quantity;
-	String category;
+	private int quantity;
+	private String category;
 
-	public Product() {
-		this.name = "ASUS";
-		this.price = 1000;
-		this.quantity = 1;
-		this.category = "laptop";
+	public Product(String name, int price, int quantity, String category) {
+		this.name = name;
+		this.price = price;
+		this.quantity = quantity;
+		this.category = category;
 	}
 
 	String getName() {
@@ -30,7 +30,7 @@ public class Product {
 	}
 
 	boolean hasStock() {
-		if (quantity != 0) {
+		if (quantity >= 1) {
 			return true;
 		} else {
 			return false;
@@ -38,7 +38,7 @@ public class Product {
 	}
 
 	boolean isCategory() {
-		if (category == "desktop") {
+		if (category == "laptop") {
 			return true;
 		} else {
 			return false;

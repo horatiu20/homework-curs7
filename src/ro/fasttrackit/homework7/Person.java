@@ -5,10 +5,10 @@ public class Person {
 	private int age;
 	private boolean isMarried;
 
-	public Person() {
-		this.name = "Maria";
-		this.age = 35;
-		this.isMarried = true;
+	public Person(String name, int age, boolean isMarried) {
+		this.name = name;
+		this.age = age;
+		this.isMarried = isMarried;
 	}
 
 	String getName() {
